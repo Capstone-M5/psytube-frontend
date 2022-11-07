@@ -1,7 +1,6 @@
 /*import { useEffect } from "react";
 import { useContext } from "react";
 import { useState } from "react";*/
-import Input from "../../components/Input";
 import { Box, StyledHome, Rodape } from "./styles";
 
 function Home() {
@@ -9,7 +8,6 @@ function Home() {
     <StyledHome>
       <Box>
         <h1>Página HOME</h1>
-        <Input />
       </Box>
       <Rodape>
         <span>
