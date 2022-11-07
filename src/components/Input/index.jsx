@@ -3,6 +3,7 @@ import image from "../../assets/Ellipse1.png";
 import { useContext, useState } from "react";
 import { VideoContext } from "../../providers/video";
 import API from "../../services/api";
+import { toast } from "react-toastify";
 
 function Input() {
   const { setVideo, setVideoUrl } = useContext(VideoContext);
@@ -10,7 +11,14 @@ function Input() {
 
   const requireVideo = () => {
     setVideoUrl(url);
-    API.post("video/", { link: url }).then((res) => setVideo(res.data));
+    toast.promise(
+      API.post("video/", { link: url }).then((res) => setVideo(res.data)),
+      {
+        pending: "Renderizando o video...",
+        success: "Video renderizado!",
+        error: "Erro ao renderizar!",
+      }
+    );
   };
   return (
     <StyledDivInput>

@@ -21,6 +21,94 @@ export const Box = styled.section`
     font-family: "Sarpanch", sans-serif;
     font-size: 30px;
     color: #fff;
+    padding-bottom: 20px;
+  }
+
+  h3 {
+    font-family: "Sarpanch", sans-serif;
+    color: #fff;
+  }
+
+  & > div {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+
+    @media (min-width: 780px) {
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: row;
+    }
+
+    & > div {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    section {
+      width: 95%;
+      height: 498px;
+      max-width: 464px;
+      border: 2px;
+      background: radial-gradient(
+            circle at 100% 100%,
+            #1d1d1d 0,
+            #1d1d1d 28px,
+            transparent 28px
+          )
+          0% 0%/30px 30px no-repeat,
+        radial-gradient(
+            circle at 0 100%,
+            #1d1d1d 0,
+            #1d1d1d 28px,
+            transparent 28px
+          )
+          100% 0%/30px 30px no-repeat,
+        radial-gradient(
+            circle at 100% 0,
+            #1d1d1d 0,
+            #1d1d1d 28px,
+            transparent 28px
+          )
+          0% 100%/30px 30px no-repeat,
+        radial-gradient(
+            circle at 0 0,
+            #1d1d1d 0,
+            #1d1d1d 28px,
+            transparent 28px
+          )
+          100% 100%/30px 30px no-repeat,
+        linear-gradient(#1d1d1d, #1d1d1d) 50% 50% / calc(100% - 4px)
+          calc(100% - 60px) no-repeat,
+        linear-gradient(#1d1d1d, #1d1d1d) 50% 50% / calc(100% - 60px)
+          calc(100% - 4px) no-repeat,
+        linear-gradient(
+          90deg,
+          rgba(255, 183, 0, 0.69) 0%,
+          rgba(255, 184, 0, 0.6) 33%,
+          rgba(253, 184, 4, 0.8) 66%,
+          rgba(255, 217, 120, 0.79) 100%
+        );
+      border-radius: 30px;
+      padding: 12px;
+      box-sizing: border-box;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+
+      a {
+        width: 60%;
+      }
+
+      img {
+        width: 95%;
+      }
+    }
   }
 `;
 

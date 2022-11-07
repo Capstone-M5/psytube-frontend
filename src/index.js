@@ -5,6 +5,8 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { GlobalStyle } from "./styles/global";
 import { BrowserRouter } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Providers from "./providers";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -15,6 +17,7 @@ root.render(
       <Providers>
         <App />
       </Providers>
+      <ToastContainer theme="dark" />
     </BrowserRouter>
   </React.StrictMode>
 );
