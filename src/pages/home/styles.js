@@ -18,6 +18,7 @@ export const Box = styled.section`
   margin-top: 6vh;
 
   h1 {
+    font-family: "Sarpanch", sans-serif;
     font-size: 30px;
     color: #fff;
   }
@@ -26,13 +27,20 @@ export const Box = styled.section`
 export const Rodape = styled.div`
   min-height: 45px;
   max-height: 80px;
-  background: #857103;
+  background-image: linear-gradient(
+    to right,
+    #ffb700,
+    #ffb800,
+    #fdb804,
+    #ffd978
+  );
   color: #fff;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   display: flex;
+  font-family: "Sarpanch", sans-serif;
   font-size: clamp(8px, 6px + 2vw, 16px);
   justify-content: space-evenly;
   flex-wrap: wrap;
