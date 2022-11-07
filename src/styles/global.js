@@ -9,5 +9,10 @@ export const GlobalStyle = createGlobalStyle`
     
     :root{
         --toastify-color-dark: #1c1c1c;
+    }  
+     
+    h1, h2, h3, h4, h5, h6{
+        font-family: 'Sarpanch', sans-serif;
+
     }
 `;
