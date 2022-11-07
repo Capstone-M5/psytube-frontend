@@ -6,6 +6,7 @@ import { Box, StyledHome, Rodape } from "./styles";
 import { Header } from "../../components/Header";
 import { useContext } from "react";
 import { VideoContext } from "../../providers/video";
+import { Button } from "../../components/Button";
 
 function Home() {
   const { video } = useContext(VideoContext);
@@ -14,9 +15,22 @@ function Home() {
     <StyledHome>
       <Header />
       <Box>
-        <h1>Página HOME</h1>
+        <h1>Baixe seus vídeos GRATIS!!</h1>
+        <div>
+          <div>
+            <Input />
+          </div>
+          {video.title && (
+            <section>
+              <img src={video.thumbnail} alt="" />
+              <h3>{video.title}</h3>
+              <a href={video.download_url} rel="noreferrer" target="_blank">
+                <Button size="100%" nameButton="Download" />
+              </a>
+            </section>
+          )}
+        </div>
       </Box>
-      <Input />
       <Rodape>
         <span>
           <strong>P.O. - </strong>

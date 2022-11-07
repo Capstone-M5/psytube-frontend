@@ -35,7 +35,8 @@ export const ButtonCM = styled.button`
 
   border: 0.5px;
 
-  color: #FFFFFF;
+  font-family: "Sarpanch", sans-serif;
+  color: #fff;
 
   height: ${({ sizeY }) => sizeY};
   width: ${({ size }) => size};
@@ -47,5 +48,10 @@ export const ButtonCM = styled.button`
 
   &:active {
     opacity: 0.8;
+  }
+
+  &:hover {
+    cursor: pointer;
+    filter: brightness(1.4);
   }
 `;
