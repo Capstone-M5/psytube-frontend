@@ -6,6 +6,7 @@ import { Box, StyledHome, Rodape } from "./styles";
 import { Header } from "../../components/Header";
 import { useContext } from "react";
 import { VideoContext } from "../../providers/video";
+import YoutubeVideo from "../../components/YoutubeVideo";
 
 function Home() {
   const { video } = useContext(VideoContext);
@@ -16,6 +17,7 @@ function Home() {
       <Box>
         <h1>Página HOME</h1>
       </Box>
+      <YoutubeVideo />
       <Input />
       <Rodape>
         <span>

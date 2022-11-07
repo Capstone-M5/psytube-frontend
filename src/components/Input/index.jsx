@@ -5,10 +5,11 @@ import { VideoContext } from "../../providers/video";
 import API from "../../services/api";
 
 function Input() {
-  const { setVideo } = useContext(VideoContext);
+  const { setVideo, setVideoUrl } = useContext(VideoContext);
   const [url, setUrl] = useState("");
 
   const requireVideo = () => {
+    setVideoUrl(url);
     API.post("video/", { link: url }).then((res) => setVideo(res.data));
   };
   return (
