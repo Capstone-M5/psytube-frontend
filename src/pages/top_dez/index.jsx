@@ -2,8 +2,8 @@
 import { useContext } from "react";
 import { useState } from "react";*/
 
-function Download() {
-  return <h1>Página de Download de Vídeos!</h1>;
+function TopDez() {
+  return <h1>Página TOP 10!</h1>;
 }
 
-export default Download;
+export default TopDez;

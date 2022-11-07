@@ -1,6 +1,6 @@
 import { Route, Switch } from "react-router-dom";
 import Home from "../pages/home";
-import Download from "../pages/download";
+import TopDez from "../pages/top_dez";
 import Login from "../pages/login";
 import Register from "../pages/register";
 
@@ -13,8 +13,8 @@ function Routes() {
       <Route path="/login" exact>
         <Login />
       </Route>
-      <Route path="/download" exact>
-        <Download />
+      <Route path="/topdez" exact>
+        <TopDez />
       </Route>
       <Route path="/">
         <Home />
