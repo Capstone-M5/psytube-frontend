@@ -4,14 +4,19 @@ import { useState } from "react";*/
 import Input from "../../components/Input";
 import { Box, StyledHome, Rodape } from "./styles";
 import { Header } from "../../components/Header";
+import { useContext } from "react";
+import { VideoContext } from "../../providers/video";
 
 function Home() {
+  const { video } = useContext(VideoContext);
+
   return (
     <StyledHome>
       <Header />
       <Box>
         <h1>Página HOME</h1>
       </Box>
+      <Input />
       <Rodape>
         <span>
           <strong>P.O. - </strong>
