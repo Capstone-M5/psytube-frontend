@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const VideoBox = styled.div`
-
   border: 3px;
   background: linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 6px)
       calc(100% - 6px) no-repeat,
@@ -13,26 +12,35 @@ export const VideoBox = styled.div`
 
   padding: 3px 7px 7px 3px;
 
-    div{
+  div {
     width: 95vw;
     min-width: 293px;
-    max-width:970px;
-
-
-    }
+    max-width: 580px;
+  }
   div div {
     position: relative;
-  padding-bottom: 56.25%;
-  
-  height: 0;
+    padding-bottom: 56.25%;
+    height: 0;
   }
 
-  @media (max-width: 1440px) {
-    margin-left: 50px;
-    align-self: flex-start;
+  @media (min-width: 900px) {
+    div {
+      width: 70vw;
+    }
   }
 
+  @media (min-width: 1150px) {
+    div {
+      width: 60vw;
+      max-width: 60vw;
+    }
+  }
 
+  /*@media (min-width: 1200px) {
+    div {
+      max-width: 1000px;
+    }
+  }*/
 `;
 
 export const IframeVideo = styled.iframe`

@@ -4,13 +4,13 @@ import { IframeVideo, VideoBox } from "./styles";
 
 function YoutubeVideo() {
   const { videoUrl } = useContext(VideoContext);
-  // const { videoUrl } = useContext(VideoContext);
   const videoPadrao = "https://www.youtube.com/embed/Y11y8Bd0Xyk";
   const LinkVideoRodando = videoUrl
-    ? videoUrl.replace("watch?v=", "embed/").split("&t=")[0]
+    ? videoUrl
+        .replace("watch?v=", "embed/")
+        .split("&t=")[0]
+        .split("&ab_channel")[0]
     : videoPadrao;
-
-  console.log(videoUrl);
 
   return (
     <VideoBox>

@@ -2,7 +2,7 @@
 import { useContext } from "react";
 import { useState } from "react";*/
 import Input from "../../components/Input";
-import { Box, StyledHome, Rodape } from "./styles";
+import { Box, StyledHome, StyledTitle, Rodape } from "./styles";
 import { Header } from "../../components/Header";
 import { useContext } from "react";
 import { VideoContext } from "../../providers/video";
@@ -15,8 +15,10 @@ function Home() {
   return (
     <StyledHome>
       <Header />
-      <Box>
+      <StyledTitle>
         <h1>Baixe seus vídeos GRATIS!!</h1>
+      </StyledTitle>
+      <Box>
         <div>
           <div>
             <Input />

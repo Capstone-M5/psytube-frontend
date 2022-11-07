@@ -10,7 +10,9 @@ export const StyledTop = styled.main`
 `;
 
 export const StyledTitle = styled.div`
-  margin-top: 2vh;
+  margin: 2vh;
+  display: flex;
+  text-align: center;
 `;
 
 export const StyledDiv = styled.div`

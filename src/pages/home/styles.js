@@ -9,6 +9,12 @@ export const StyledHome = styled.main`
   min-height: 100vh;
 `;
 
+export const StyledTitle = styled.div`
+  margin: 2vh;
+  display: flex;
+  text-align: center;
+`;
+
 export const Box = styled.section`
   display: flex;
   align-items: center;
@@ -18,14 +24,12 @@ export const Box = styled.section`
   margin-top: 6vh;
 
   h1 {
-    font-family: "Sarpanch", sans-serif;
     font-size: 30px;
     color: #fff;
     padding-bottom: 20px;
   }
 
   h3 {
-    font-family: "Sarpanch", sans-serif;
     color: #fff;
   }
 
@@ -36,13 +40,14 @@ export const Box = styled.section`
     flex-direction: column;
     gap: 30px;
 
-    @media (min-width: 780px) {
+    @media (min-width: 900px) {
       align-items: flex-start;
       justify-content: center;
       flex-direction: row;
     }
 
     & > div {
+      gap: 30px;
       width: 60%;
       display: flex;
       flex-direction: column;
