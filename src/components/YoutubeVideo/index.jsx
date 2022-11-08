@@ -7,10 +7,10 @@ function YoutubeVideo() {
   const videoPadrao = "https://www.youtube.com/embed/Y11y8Bd0Xyk";
   const LinkVideoRodando = videoUrl
     ? videoUrl
+        .replace(".be/", "be.com/embed/")
         .replace("watch?v=", "embed/")
         .split("&t=")[0]
         .split("&ab_channel")[0]
-        .split("&list=")[0]
     : videoPadrao;
 
   return (
