@@ -2,7 +2,7 @@ import { useHistory } from "react-router-dom";
 import { StyledHeader } from "./styles";
 
 /*import { Button } from "./../Button";*/
-/*import { Input } from "./../Input"*/
+import Input from "./../Input";
 
 export function Header({ type }) {
   const historico = useHistory();
@@ -11,16 +11,17 @@ export function Header({ type }) {
     historico.push("/topdez");
   };
 
+  const levarAHome = () => {
+    historico.push("/");
+  };
+
   switch (type) {
     case "topDez":
       return (
         <StyledHeader>
-          <h1>PsyTube</h1>
+          <h1 onClick={levarAHome}>PsyTube</h1>
           <div>
-            <form>
-              <input name="link" placeholder="Colo aqui o link do vídeo" />
-              <button type="submit">!!!</button>
-            </form>
+            <Input />
           </div>
         </StyledHeader>
       );
