@@ -22,7 +22,11 @@ function Input() {
   };
   return (
     <StyledDivInput>
-      <input type="text" onChange={(e) => setUrl(e.target.value)} />
+      <input
+        type="text"
+        onChange={(e) => setUrl(e.target.value)}
+        placeholder="https://www.youtube.com/watch?v=LMD6MqwErzc&t=1s&ab_channel=JesusAmor"
+      />
       <button onClick={requireVideo}>
         <img src={image} alt="" />
       </button>
