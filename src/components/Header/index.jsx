@@ -1,8 +1,5 @@
 import { useHistory } from "react-router-dom";
-import { StyledHeader } from "./styles";
-
-/*import { Button } from "./../Button";*/
-import Input from "./../Input";
+import { StyledHeader, StyledDivTitle, StyledDivLink } from "./styles";
 
 export function Header({ type }) {
   const historico = useHistory();
@@ -19,16 +16,25 @@ export function Header({ type }) {
     case "topDez":
       return (
         <StyledHeader>
-          <h1 onClick={levarAHome}>PsyTube</h1>
-          <div>
-            <Input />
-          </div>
+          <StyledDivTitle>
+            <h1>PsyTube</h1>
+          </StyledDivTitle>
+          <StyledDivLink>
+            <h2>Faça Donwload dos seus vídeos</h2>
+            <p onClick={levarAHome}>AQUI</p>
+          </StyledDivLink>
         </StyledHeader>
       );
     default:
       return (
         <StyledHeader>
-          <h1 onClick={levarAoTopDez}>PsyTube</h1>
+          <StyledDivTitle>
+            <h1>PsyTube</h1>
+          </StyledDivTitle>
+          <StyledDivLink>
+            <h2>TOP 10 vídeos mais baixados</h2>
+            <p onClick={levarAoTopDez}>AQUI</p>
+          </StyledDivLink>
         </StyledHeader>
       );
   }
