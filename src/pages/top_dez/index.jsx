@@ -1,13 +1,23 @@
 /*import { useEffect } from "react";
 import { useContext } from "react";
-import { useState } from "react";*/
+*/
+import { useState } from "react";
 import { Card } from "../../components/Card";
 import { Header } from "../../components/Header";
 import { StyledDiv, StyledTitle, StyledTop } from "./styles";
 import Imagem from "../../assets/psyduck.png";
+import API from "../../services/api";
+import { useEffect } from "react";
 
 function TopDez() {
   let thumbnail = Imagem;
+
+  const [arrVideos, setArrVideos] = useState([]) 
+  console.log(arrVideos);
+
+  useEffect (() => {
+    API.get("videos/").then(r => setArrVideos(r.data.results))
+  },[])
 
   return (
     <StyledTop>
@@ -16,16 +26,16 @@ function TopDez() {
         <h1>Top 10 Mais Baixados</h1>
       </StyledTitle>
       <StyledDiv>
-        <Card thumbnail={thumbnail} maxSizeX={"25vh"} maxSizeY={"25vh"} />
-        <Card thumbnail={thumbnail} maxSizeX={"25vh"} maxSizeY={"25vh"} />
-        <Card thumbnail={thumbnail} maxSizeX={"25vh"} maxSizeY={"25vh"} />
-        <Card thumbnail={thumbnail} maxSizeX={"25vh"} maxSizeY={"25vh"} />
-        <Card thumbnail={thumbnail} maxSizeX={"25vh"} maxSizeY={"25vh"} />
-        <Card thumbnail={thumbnail} maxSizeX={"25vh"} maxSizeY={"25vh"} />
-        <Card thumbnail={thumbnail} maxSizeX={"25vh"} maxSizeY={"25vh"} />
-        <Card thumbnail={thumbnail} maxSizeX={"25vh"} maxSizeY={"25vh"} />
-        <Card thumbnail={thumbnail} maxSizeX={"25vh"} maxSizeY={"25vh"} />
-        <Card thumbnail={thumbnail} maxSizeX={"25vh"} maxSizeY={"25vh"} />
+        {
+          arrVideos.map((video) => (
+            <Card 
+            thumbnail={video.thumbnail} 
+            maxSizeX={"45vh"} 
+            maxSizeY={"25vh"} 
+            />
+          ))
+        }
+        
       </StyledDiv>
     </StyledTop>
   );

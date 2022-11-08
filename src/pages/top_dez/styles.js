@@ -22,8 +22,15 @@ export const StyledDiv = styled.div`
   align-items: center;
   width: 90%;
 
+  img{
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+
   @media (min-width: 800px) {
     flex-wrap: wrap;
     flex-direction: row;
   }
+
 `;
