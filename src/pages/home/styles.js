@@ -4,9 +4,9 @@ export const StyledHome = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #1d1d1d;
   width: 100%;
   min-height: 100vh;
+  
 `;
 
 export const StyledTitle = styled.div`

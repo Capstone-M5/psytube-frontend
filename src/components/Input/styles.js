@@ -51,6 +51,8 @@ export const StyledDivInput = styled.div`
   button {
     border: none;
     position: absolute;
+    top: 10px;
+    right: 20px;
     translate: 20px -10px;
     width: 40px;
     height: 40px;

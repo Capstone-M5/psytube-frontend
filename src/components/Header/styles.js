@@ -8,7 +8,6 @@ export const StyledHeader = styled.header`
   width: 100vw;
   box-sizing: border-box;
   height: ${(props) => props.heigth || "90px"};
-  background-image: linear-gradient(to right, #181818, #505050);
   border-bottom: 2px solid transparent;
   border-image: linear-gradient(0.25turn, #f2b720, #fdb804, #ffb800, #ffd978);
   border-image-slice: 1;
