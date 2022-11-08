@@ -16,7 +16,7 @@ function Home() {
     <StyledHome>
       <Header />
       <StyledTitle>
-        <h1>Baixe seus vídeos GRATIS!!</h1>
+        <h1>Baixe seus vídeos GRÁTIS!!!</h1>
       </StyledTitle>
       <Box>
         <div>
