@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
         background: -webkit-linear-gradient(25deg,rgba(24, 24, 24, 1) 0%, rgba(24, 24, 24, 1) 66%, rgba(80, 80, 80, 0.88) 100%);
         background: linear-gradient(25deg, rgba(24, 24, 24, 1) 0%, rgba(24, 24, 24, 1) 66%, rgba(80, 80, 80, 0.88) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#181818",endColorstr="#505050",GradientType=1);
+        overflow-x:hidden;
     }
 
     :root{

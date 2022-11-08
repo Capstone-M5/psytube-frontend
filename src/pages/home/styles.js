@@ -6,7 +6,6 @@ export const StyledHome = styled.main`
   align-items: center;
   width: 100%;
   min-height: 100vh;
-  
 `;
 
 export const StyledTitle = styled.div`
@@ -22,6 +21,7 @@ export const Box = styled.section`
   flex-direction: column;
   width: 100%;
   margin-top: 6vh;
+  padding-bottom: 60px;
 
   h1 {
     font-size: 30px;
@@ -107,11 +107,20 @@ export const Box = styled.section`
       gap: 15px;
 
       a {
+        margin-top: 30px;
         width: 60%;
       }
 
       img {
+        aspect-ratio: 16/9;
+        object-fit: cover;
         width: 95%;
+        background: linear-gradient(white, white) padding-box,
+          linear-gradient(0.25turn, #f2b720, #fdb804, #ffb800, #ffd978)
+            border-box;
+        border-radius: 30px;
+        border: 2px solid transparent;
+        margin: 10px;
       }
     }
   }
