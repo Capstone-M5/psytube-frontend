@@ -10,6 +10,7 @@ function YoutubeVideo() {
         .replace("watch?v=", "embed/")
         .split("&t=")[0]
         .split("&ab_channel")[0]
+        .split("&list=")[0]
     : videoPadrao;
 
   return (
