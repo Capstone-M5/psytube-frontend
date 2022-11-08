@@ -1,6 +1,3 @@
-/*import { useEffect } from "react";
-import { useContext } from "react";
-import { useState } from "react";*/
 import Input from "../../components/Input";
 import { Box, StyledHome, StyledTitle, Rodape } from "./styles";
 import { Header } from "../../components/Header";
