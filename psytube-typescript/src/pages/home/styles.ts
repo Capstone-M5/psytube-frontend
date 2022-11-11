@@ -48,10 +48,13 @@ export const Box = styled.section`
 
     & > div {
       gap: 30px;
-      width: 60%;
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
+      @media (min-width: 900px) {
+        width: 60%;
+      }
     }
     section {
       width: 95%;
