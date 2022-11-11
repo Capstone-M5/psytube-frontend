@@ -8,11 +8,12 @@ import { toast } from "react-toastify";
 function Input() {
   const { setVideo, setVideoUrl } = useContext(VideoContext);
   const [url, setUrl] = useState("");
+  const [type, setType] = useState("video");
 
   const requireVideo = () => {
     setVideoUrl(url);
     toast.promise(
-      API.post("video/", { link: url }).then((res) => setVideo(res.data)),
+      API.post("video/", { link: url, type }).then((res) => setVideo(res.data)),
       {
         pending: "Renderizando o video...",
         success: "Video renderizado!",
@@ -27,6 +28,10 @@ function Input() {
         onChange={(e) => setUrl(e.target.value)}
         placeholder="https://www.youtube.com/watch?v=LMD6MqwErzc&t=1s&ab_channel=JesusAmor"
       />
+      <select onChange={(e) => setType(e.target.value)}>
+        <option value="video">Video/Audio</option>
+        <option value="audio">Audio</option>
+      </select>
       <button onClick={requireVideo}>
         <img src={image} alt="" />
       </button>

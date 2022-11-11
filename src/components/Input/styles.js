@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledDivInput = styled.div`
   width: 95%;
   height: 40px;
-  padding: 10px 20px;
+  padding: 10px 1rem;
   border: 2px;
   background: radial-gradient(
         circle at 100% 100%,
@@ -36,7 +36,7 @@ export const StyledDivInput = styled.div`
   input {
     background-color: transparent;
     border: none;
-    width: calc(100% - 40px);
+    width: calc(100% - 140px);
     height: 100%;
     caret-color: white;
     color: white;
@@ -47,6 +47,29 @@ export const StyledDivInput = styled.div`
   }
 
   position: relative;
+  display: flex;
+  justify-content: left;
+
+  select {
+    width: 100px;
+    height: 36px;
+    box-sizing: border-box;
+    position: absolute;
+    translate: 0px -8px;
+    top: 10px;
+    right: 40px;
+    background-color: #1d1d1d;
+    border: none;
+    border-left: 2px solid transparent;
+    border-image: linear-gradient(0.25turn, #f2b720, #fdb804, #ffb800, #ffd978);
+    border-image-slice: 1;
+    color: #ffd978;
+    padding-left: 7px;
+
+    &:focus {
+      outline: none;
+    }
+  }
 
   button {
     border: none;
