@@ -1,8 +1,5 @@
 import { useHistory } from "react-router-dom";
-import { StyledHeader } from "./styles";
-
-/*import { Button } from "./../Button";*/
-/*import { Input } from "./../Input"*/
+import { StyledHeader, StyledDivTitle, StyledDivLink } from "./styles";
 
 export function Header({ type }) {
   const historico = useHistory();
@@ -11,23 +8,33 @@ export function Header({ type }) {
     historico.push("/topdez");
   };
 
+  const levarAHome = () => {
+    historico.push("/");
+  };
+
   switch (type) {
     case "topDez":
       return (
         <StyledHeader>
-          <h1>PsyTube</h1>
-          <div>
-            <form>
-              <input name="link" placeholder="Colo aqui o link do vídeo" />
-              <button type="submit">!!!</button>
-            </form>
-          </div>
+          <StyledDivTitle>
+            <h1>PsyTube</h1>
+          </StyledDivTitle>
+          <StyledDivLink>
+            <h2>Faça Donwload dos seus vídeos</h2>
+            <p onClick={levarAHome}>AQUI</p>
+          </StyledDivLink>
         </StyledHeader>
       );
     default:
       return (
         <StyledHeader>
-          <h1 onClick={levarAoTopDez}>PsyTube</h1>
+          <StyledDivTitle>
+            <h1>PsyTube</h1>
+          </StyledDivTitle>
+          <StyledDivLink>
+            <h2>TOP 10 vídeos mais baixados</h2>
+            <p onClick={levarAoTopDez}>AQUI</p>
+          </StyledDivLink>
         </StyledHeader>
       );
   }

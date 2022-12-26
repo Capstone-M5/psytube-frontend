@@ -4,9 +4,14 @@ export const StyledHome = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #1d1d1d;
   width: 100%;
   min-height: 100vh;
+`;
+
+export const StyledTitle = styled.div`
+  margin: 2vh;
+  display: flex;
+  text-align: center;
 `;
 
 export const Box = styled.section`
@@ -16,16 +21,15 @@ export const Box = styled.section`
   flex-direction: column;
   width: 100%;
   margin-top: 6vh;
+  padding-bottom: 60px;
 
   h1 {
-    font-family: "Sarpanch", sans-serif;
     font-size: 30px;
     color: #fff;
     padding-bottom: 20px;
   }
 
   h3 {
-    font-family: "Sarpanch", sans-serif;
     color: #fff;
   }
 
@@ -36,13 +40,14 @@ export const Box = styled.section`
     flex-direction: column;
     gap: 30px;
 
-    @media (min-width: 780px) {
+    @media (min-width: 900px) {
       align-items: flex-start;
       justify-content: center;
       flex-direction: row;
     }
 
     & > div {
+      gap: 30px;
       width: 60%;
       display: flex;
       flex-direction: column;
@@ -102,11 +107,20 @@ export const Box = styled.section`
       gap: 15px;
 
       a {
+        margin-top: 30px;
         width: 60%;
       }
 
       img {
+        aspect-ratio: 16/9;
+        object-fit: cover;
         width: 95%;
+        background: linear-gradient(white, white) padding-box,
+          linear-gradient(0.25turn, #f2b720, #fdb804, #ffb800, #ffd978)
+            border-box;
+        border-radius: 30px;
+        border: 2px solid transparent;
+        margin: 10px;
       }
     }
   }

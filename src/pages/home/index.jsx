@@ -1,11 +1,9 @@
-/*import { useEffect } from "react";
-import { useContext } from "react";
-import { useState } from "react";*/
 import Input from "../../components/Input";
-import { Box, StyledHome, Rodape } from "./styles";
+import { Box, StyledHome, StyledTitle, Rodape } from "./styles";
 import { Header } from "../../components/Header";
 import { useContext } from "react";
 import { VideoContext } from "../../providers/video";
+import YoutubeVideo from "../../components/YoutubeVideo";
 import { Button } from "../../components/Button";
 
 function Home() {
@@ -14,11 +12,14 @@ function Home() {
   return (
     <StyledHome>
       <Header />
+      <StyledTitle>
+        <h1>Baixe seus vídeos GRÁTIS!!!</h1>
+      </StyledTitle>
       <Box>
-        <h1>Baixe seus vídeos GRATIS!!</h1>
         <div>
           <div>
             <Input />
+            <YoutubeVideo />
           </div>
           {video.title && (
             <section>

@@ -1,17 +1,33 @@
-/*import { useEffect } from "react";
-import { useContext } from "react";
-import { useState } from "react";*/
+import { useState } from "react";
+import { Card } from "../../components/Card";
 import { Header } from "../../components/Header";
-import { StyledDowload } from "./styles";
+import { StyledDiv, StyledTitle, StyledTop } from "./styles";
+import API from "../../services/api";
+import { useEffect } from "react";
 
 function TopDez() {
+  const [arrVideos, setArrVideos] = useState([]);
+
+  useEffect(() => {
+    API.get("videos/").then((r) => setArrVideos(r.data.results));
+  }, []);
+
   return (
-    <StyledDowload>
+    <StyledTop>
       <Header type="topDez" />
-      <div>
-        <h1>Página TOP 10!</h1>
-      </div>
-    </StyledDowload>
+      <StyledTitle>
+        <h1>Top 10 Mais Baixados</h1>
+      </StyledTitle>
+      <StyledDiv>
+        {arrVideos.map((video) => (
+          <Card
+            thumbnail={video.thumbnail}
+            maxSizeX={"45vh"}
+            maxSizeY={"25vh"}
+          />
+        ))}
+      </StyledDiv>
+    </StyledTop>
   );
 }
 
